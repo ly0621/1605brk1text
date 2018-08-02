@@ -1,0 +1,49 @@
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include display(flex, column, flex-start, flex-start);
+}
+
+.header {
+    width: 100%;
+    @include display(flex, row, flex-start, flex-start);
+    img {
+        width: px2rem(100px);
+        padding: px2rem(10px);
+    }
+    span {
+        line-height: px2rem(100px);
+        font-size: px2rem(18px);
+    }
+}
+
+.section {
+    flex: 1;
+    width: 100%;
+    overflow: auto;
+    padding-top: px2rem(10px);
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+            padding: px2rem(5px) 0;
+            @include display(flex, row);
+            .pic {
+                padding: px2rem(10px);
+                img {
+                    width: px2rem(30px);
+                }
+            }
+            .tit {
+                flex: 1;
+                padding: 0 px2rem(15px) px2rem(15px) 0;
+                @include display(flex, row, space-between);
+                border-bottom: 1px solid #ccc;
+                span {
+                    font-size: px2rem(18px);
+                }
+            }
+        }
+    }
+}
